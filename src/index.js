@@ -1,15 +1,9 @@
-import 'angular';
-import 'lodash';
-import 'font-awesome/css/font-awesome.css';
-
 import angularAnimate from 'angular-animate';
 import angularUIRouter from 'angular-ui-router';
 import angularUIBootstrap from 'angular-ui-bootstrap';
 
 import env from './scripts/common/env.js';
 import debug from './scripts/common/debug.js';
-
-import './scss/entry.scss';
 
 export const Kaas = angular.module('kaas', [
 angularAnimate,
@@ -29,5 +23,8 @@ Kaas.run((debug) => {
 })
 
 Kaas.controller('kaas', ($scope) => {
-	console.log($scope);
+	$scope.test = "testing";
 })
+if(module.hot){
+	module.hot.accept();
+}

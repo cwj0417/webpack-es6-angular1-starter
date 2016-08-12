@@ -2,8 +2,14 @@
   "name": "kaas",
   "version": "1.0.0",
   "description": "",
-  "title":"KAASSSSS",
+  "title": "KAASSSSS",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist/* && webpack -p",
+    "dev": "export NODE_ENV=dev && cp env/dev.js src/scripts/common/env.js && webpack-dev-server --inline --hot --progress --colors",
+    "product": "export NODE_ENV=production && cp env/production.js src/scripts/common/env.js && webpack-dev-s erver --inline --hot --progress --colors"
+  },
   "dependencies": {
     "angular": "^1.5.8",
     "angular-animate": "^1.5.8",
@@ -15,6 +21,7 @@
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.13.2",
     "css-loader": "^0.23.1",
@@ -28,11 +35,6 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf www/* && webpack -p",
-    "dev": "webpack-dev-server --port 9100 --watch --progress --colors"
   },
   "author": "Jin",
   "license": "ISC"
