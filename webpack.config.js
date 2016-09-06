@@ -25,7 +25,7 @@ var config = {
             loader: "style!css"
         }, {
             test: /\.scss$/,
-            loader: "style!css!autoprefixer!sass"
+            loader: "style!css!postcss!sass"
         }, {
             test: /\.js$/,
             exclude: /(node_modules)/,
